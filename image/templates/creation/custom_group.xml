@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE template SYSTEM "../template.dtd">
+
+<template>
+	<askcontainer>1</askcontainer>
+	<description>New Group</description>
+	<icon>ldap-ou.png</icon>
+	<invalid>0</invalid>
+	<rdn>cn</rdn>
+	<!--<regexp>^ou=People,o=.*,</regexp>-->
+	<title>Generic: Group</title>
+	<visible>1</visible>
+
+	<objectClasses>
+		<objectClass id="groupOfUniqueNames"></objectClass>
+		<objectClass id="extensibleObject"></objectClass>
+	</objectClasses>
+
+	<attributes>
+
+		<attribute id="cn">
+			<display>Group</display>
+			<order>1</order>
+			<page>1</page>
+		</attribute>
+
+		<attribute id="o">
+			<display>Organization</display>
+			<order>2</order>
+			<page>1</page>
+		</attribute>
+
+		<attribute id="ou">
+			<display>Organizational Unit</display>
+			<order>3</order>
+			<page>1</page>
+			<spacer>1</spacer>
+		</attribute>
+
+		<attribute id="uniqueMember">
+			<display>Group members</display>
+			<order>4</order>
+			<page>1</page>
+			<!-- <value><![CDATA[=php.MultiList(/;(&(|(objectClass=posixAccount)));uid;%cn% (%uid|-4%))]]></value> -->
+		</attribute>
+
+	</attributes>
+
+
+</template>
+<!-- vim: ts=4 noet
+-->
+<!-- vim: ts=4
+-->

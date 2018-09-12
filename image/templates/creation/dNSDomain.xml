@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE template SYSTEM "template.dtd">
+
+<template>
+	<askcontainer>1</askcontainer>
+	<description>New DNS Entry</description>
+	<icon>ldap-dc.png</icon>
+	<invalid>1</invalid>
+	<rdn>dc</rdn>
+	<!--<regexp>^ou=People,o=.*,</regexp>-->
+	<title>Generic: DNS Entry</title>
+	<visible>0</visible>
+
+	<objectClasses>
+		<objectClass id="dnsDomain"></objectClass>
+		<objectClass id="domainRelatedObject"></objectClass>
+	</objectClasses>
+
+	<attributes>
+		<attribute id="dc">
+			<display>Domain Component</display>
+			<order>1</order>
+			<page>1</page>
+		</attribute>
+		<attribute id="associatedDomain">
+			<display>Associated Domain</display>
+			<order>2</order>
+			<page>1</page>
+		</attribute>
+	</attributes>
+
+</template>
+<!-- vim: ts=4
+-->

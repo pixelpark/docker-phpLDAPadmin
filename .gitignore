@@ -1,2 +1,12 @@
+*.retry
+*.swp
+*.log
+*.pyc
+*.egg
+*-stamp
+*.bak
+*.backup
+*.old
 /.twgit_features_subject
 /.twgit
+/images

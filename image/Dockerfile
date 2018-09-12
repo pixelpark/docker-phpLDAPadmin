@@ -30,7 +30,8 @@ RUN apt-get update \
 	&& apt-get remove -y --purge --auto-remove curl ca-certificates \
 	&& rm phpldapadmin.tgz \
 	&& apt-get clean \
-	&& rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+	&& rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
+	&& rm -f /etc/dpkg/dpkg.cfg.d/01_nolocales
 
 # Add service directory to /container/service
 ADD service /container/service
@@ -41,6 +42,9 @@ RUN /container/tool/install-service
 
 # Add default env variables
 ADD environment /container/environment/99-default
+
+ADD templates/creation/*.xml /var/www/phpldapadmin_bootstrap/templates/creation/
+ADD templates/modification/*.xml /var/www/phpldapadmin_bootstrap/templates/modification/
 
 # Set phpLDAPadmin data directory in a data volume
 VOLUME ["/var/www/phpldapadmin"]

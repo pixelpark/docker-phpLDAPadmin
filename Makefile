@@ -1,5 +1,5 @@
-NAME = osixia/phpldapadmin
-VERSION = 0.7.2
+NAME = frankbrehm/phpldapadmin
+VERSION = 0.7.2.1
 
 .PHONY: build build-nocache test tag-latest push push-latest release git-tag-version
 
