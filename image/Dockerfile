@@ -14,6 +14,7 @@ ARG PHPLDAPADMIN_SHA1=669fca66c75e24137e106fdd02e3832f81146e23
 # Download phpLDAPadmin, check file integrity, and unzip phpLDAPadmin to /var/www/phpldapadmin_bootstrap
 # Remove curl
 RUN apt-get update \
+	&& rm -fv /etc/dpkg/dpkg.cfg.d/01_nolocales \
 	&& /container/tool/add-multiple-process-stack \
 	&& /container/tool/add-service-available :apache2 :php7.0-fpm :ssl-tools \
 	&& LC_ALL=C DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
@@ -30,8 +31,7 @@ RUN apt-get update \
 	&& apt-get remove -y --purge --auto-remove curl ca-certificates \
 	&& rm phpldapadmin.tgz \
 	&& apt-get clean \
-	&& rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
-	&& rm -f /etc/dpkg/dpkg.cfg.d/01_nolocales
+	&& rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Add service directory to /container/service
 ADD service /container/service

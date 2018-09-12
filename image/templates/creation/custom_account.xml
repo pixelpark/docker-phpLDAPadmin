@@ -6,11 +6,11 @@
 	<askcontainer>1</askcontainer>
 	<description>New Account (no Posix)</description>
 	<icon>ldap-user.png</icon>
-	<invalid>1</invalid>
+	<invalid>0</invalid>
 	<rdn>uid</rdn>
 	<!--<regexp>^ou=People,o=.*,</regexp>-->
-	<title>Generic: Account</title>
-	<visible>0</visible>
+	<title>Generic: Account (no Posix)</title>
+	<visible>1</visible>
 
 	<objectClasses>
 		<objectClass id="account"></objectClass>
