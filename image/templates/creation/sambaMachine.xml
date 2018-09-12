@@ -5,11 +5,11 @@
 <askcontainer>1</askcontainer>
 <description>New Samba3 Machine</description>
 <icon>server.png</icon>
-<invalid>0</invalid>
+<invalid>1</invalid>
 <rdn>uid</rdn>
 <!--<regexp>^ou=People,o=.*,</regexp>-->
 <title>Samba: Machine</title>
-<visible>1</visible>
+<visible>0</visible>
 
 <objectClasses>
 <objectClass id="sambaSAMAccount"></objectClass>

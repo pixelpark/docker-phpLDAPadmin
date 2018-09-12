@@ -13,7 +13,7 @@
 <rdn>sendmailMTAMapObject</rdn>
 <!--<regexp>^ou=People,o=.*,</regexp>-->
 <title>Sendmail: Virtual Users</title>
-<visible>1</visible>
+<visible>0</visible>
 
 <objectClasses>
 <objectClass id="sendmailMTAMapObject"></objectClass>

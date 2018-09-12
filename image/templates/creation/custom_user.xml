@@ -73,16 +73,27 @@
 			<verify>1</verify>
 		</attribute>
 
+		<attribute id="inetUserStatus">
+			<display>User status</display>
+			<order>6</order>
+			<page>1</page>
+			<type>select</type>
+			<value id="active">Active</value>
+			<value id="inactive">Inactive</value>
+			<value id="deleted">Deleted</value>
+			<spacer>1</spacer>
+		</attribute>
+
 		<attribute id="mail">
 			<display>Email</display>
-			<order>6</order>
+			<order>7</order>
 			<page>1</page>
 		</attribute>
 
 		<attribute id="uidNumber">
 			<display>UID Number</display>
 			<icon>terminal.png</icon>
-			<order>7</order>
+			<order>8</order>
 			<page>1</page>
 			<readonly>1</readonly>
 			<value>=php.GetNextNumber(/;uidNumber)</value>
@@ -91,7 +102,7 @@
 		<attribute id="gidNumber">
 			<display>GID Number</display>
 			<!-- <onchange>=autoFill(homeDirectory;/home/users/%gidNumber|0-0/T%/%uid|3-%)</onchange> -->
-			<order>8</order>
+			<order>9</order>
 			<page>1</page>
 			<value><![CDATA[=php.PickList(/;(&(objectClass=posixGroup));gidNumber;%cn%;;;;cn)]]></value>
 		</attribute>
@@ -99,7 +110,7 @@
 		<attribute id="homeDirectory">
 			<display>Home directory</display>
 			<!-- <onchange>=autoFill(homeDirectory;/home/users/%gidNumber|0-0/T%/%uid|3-%)</onchange> -->
-			<order>9</order>
+			<order>10</order>
 			<page>1</page>
 		</attribute>
 
@@ -116,29 +127,23 @@
 			<value id="/bin/zsh">Z Shell</value>
 		</attribute>
 
-		<attribute id="mail">
-			<display>Email</display>
-			<order>11</order>
-			<page>1</page>
-		</attribute>
-
 		<attribute id="jpegPhoto">
 			<display>Photo</display>
 			<icon>photo.png</icon>
-			<order>12</order>
+			<order>11</order>
 			<spacer>1</spacer>
 		</attribute>
 
 		<attribute id="o">
 			<display>Organisation</display>
-			<order>13</order>
+			<order>12</order>
 			<page>1</page>
 		</attribute>
 
 		<attribute id="street">
 			<display>Street</display>
 			<icon>mail.png</icon>
-			<order>14</order>
+			<order>13</order>
 			<page>1</page>
 			<cols>50</cols>
 			<rows>4</rows>
@@ -147,19 +152,19 @@
 
 		<attribute id="l">
 			<display>City</display>
-			<order>15</order>
+			<order>14</order>
 			<page>1</page>
 		</attribute>
 
 		<attribute id="st">
 			<display>State</display>
-			<order>16</order>
+			<order>15</order>
 			<page>1</page>
 		</attribute>
 
 		<attribute id="postalCode">
 			<display>Postal code</display>
-			<order>17</order>
+			<order>16</order>
 			<page>1</page>
 			<spacer>1</spacer>
 		</attribute>
@@ -167,19 +172,19 @@
 		<attribute id="telephoneNumber">
 			<display>Work phone</display>
 			<icon>phone.png</icon>
-			<order>18</order>
+			<order>17</order>
 			<page>1</page>
 		</attribute>
 
 		<attribute id="mobile">
 			<display>Mobile</display>
-			<order>19</order>
+			<order>18</order>
 			<page>1</page>
 		</attribute>
 
 		<attribute id="facsimileTelephoneNumber">
 			<display>Fax</display>
-			<order>20</order>
+			<order>19</order>
 			<page>1</page>
 		</attribute>
 

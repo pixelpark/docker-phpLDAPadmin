@@ -5,11 +5,11 @@
 <askcontainer>1</askcontainer>
 <description>New Samba3 Account</description>
 <icon>ldap-user.png</icon>
-<invalid>0</invalid>
+<invalid>1</invalid>
 <rdn>cn</rdn>
 <!--<regexp>^ou=People,o=.*,</regexp>-->
 <title>Samba: Account</title>
-<visible>1</visible>
+<visible>0</visible>
 
 <objectClasses>
 <objectClass id="inetOrgPerson"></objectClass>

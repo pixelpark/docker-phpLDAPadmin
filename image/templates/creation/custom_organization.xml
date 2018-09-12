@@ -24,6 +24,7 @@
 			<icon>ldap-o.png</icon>
 			<order>1</order>
 			<page>1</page>
+			<spacer>1</spacer>
 		</attribute>
 
 		<attribute id="description">
@@ -67,7 +68,7 @@
 
 		<attribute id="l">
 			<display>City</display>
-			<order>2s715</order>
+			<order>7</order>
 			<page>1</page>
 		</attribute>
 

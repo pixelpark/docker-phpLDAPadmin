@@ -5,11 +5,11 @@
 <askcontainer>1</askcontainer>
 <description>New Address Book Entry</description>
 <icon>address-book.png</icon>
-<invalid>0</invalid>
+<invalid>1</invalid>
 <rdn>cn</rdn>
 <!--<regexp>^ou=People,o=.*,</regexp>-->
 <title>Kolab: User Entry</title>
-<visible>1</visible>
+<visible>0</visible>
 
 <objectClasses>
 <objectClass id="inetOrgPerson"></objectClass>

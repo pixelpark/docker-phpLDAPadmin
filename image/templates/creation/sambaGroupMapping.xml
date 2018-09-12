@@ -5,11 +5,11 @@
 <askcontainer>1</askcontainer>
 <description>New Samba3 Group Mapping</description>
 <icon>ldap-ou.png</icon>
-<invalid>0</invalid>
+<invalid>1</invalid>
 <rdn>cn</rdn>
 <!-- <regexp>^ou=.*,</regexp> -->
 <title>Samba: Group Mapping</title>
-<visible>1</visible>
+<visible>0</visible>
 
 <objectClasses>
 <objectClass id="posixGroup"></objectClass>

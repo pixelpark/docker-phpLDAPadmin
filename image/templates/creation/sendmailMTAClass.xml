@@ -9,7 +9,7 @@
 <rdn>sendmailMTACluster</rdn>
 <!--<regexp>^ou=People,o=.*,</regexp>-->
 <title>Sendmail: Domain</title>
-<visible>1</visible>
+<visible>0</visible>
 
 <objectClasses>
 <objectClass id="sendmailMTAClass"></objectClass>

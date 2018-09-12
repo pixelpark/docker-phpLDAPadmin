@@ -13,7 +13,7 @@
 <rdn>sendmailMTACluster</rdn>
 <!--<regexp>^ou=People,o=.*,</regexp>-->
 <title>Sendmail: Relays</title>
-<visible>1</visible>
+<visible>0</visible>
 
 <objectClasses>
 <objectClass id="sendmailMTAMapObject"></objectClass>
