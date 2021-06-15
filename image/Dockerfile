@@ -45,6 +45,7 @@ ADD environment /container/environment/99-default
 
 ADD templates/creation/*.xml /var/www/phpldapadmin_bootstrap/templates/creation/
 ADD templates/modification/*.xml /var/www/phpldapadmin_bootstrap/templates/modification/
+ADD info.php dirs.php /var/www/phpldapadmin_bootstrap/htdocs/
 
 # Set phpLDAPadmin data directory in a data volume
 VOLUME ["/var/www/phpldapadmin"]
