@@ -13,6 +13,7 @@ ARG PHPLDAPADMIN_VERSION=1.2.5
 # Download phpLDAPadmin, check file integrity, and unzip phpLDAPadmin to /var/www/phpldapadmin_bootstrap
 # Remove curl
 RUN apt-get update \
+	&& rm -fv /etc/dpkg/dpkg.cfg.d/01_nolocales \
 	&& /container/tool/add-multiple-process-stack \
 	&& /container/tool/add-service-available :apache2 :php7.3-fpm :ssl-tools \
 	&& LC_ALL=C DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
@@ -38,6 +39,9 @@ RUN /container/tool/install-service
 
 # Add default env variables
 ADD environment /container/environment/99-default
+
+ADD templates/creation/*.xml /var/www/phpldapadmin_bootstrap/templates/creation/
+ADD templates/modification/*.xml /var/www/phpldapadmin_bootstrap/templates/modification/
 
 # Set phpLDAPadmin data directory in a data volume
 VOLUME ["/var/www/phpldapadmin"]

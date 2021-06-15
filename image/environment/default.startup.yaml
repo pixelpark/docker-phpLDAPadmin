@@ -1,11 +1,9 @@
 PHPLDAPADMIN_LDAP_HOSTS:
   - ldap.example.org:
     - server:
-      - tls: true
+      - tls: false
     - login:
-      - bind_id: cn=admin,dc=example,dc=org
-  - ldap2.example.org
-  - ldap3.example.org
+      - bind_id: cn=admin
 
 # LDAP client tls config
 PHPLDAPADMIN_LDAP_CLIENT_TLS: true

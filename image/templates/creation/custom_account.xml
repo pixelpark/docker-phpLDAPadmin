@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE template SYSTEM "template.dtd">
+
+<template>
+
+	<askcontainer>1</askcontainer>
+	<description>New Account (no Posix)</description>
+	<icon>ldap-user.png</icon>
+	<invalid>0</invalid>
+	<rdn>uid</rdn>
+	<!--<regexp>^ou=People,o=.*,</regexp>-->
+	<title>Generic: Account (no Posix)</title>
+	<visible>1</visible>
+
+	<objectClasses>
+		<objectClass id="account"></objectClass>
+		<objectClass id="inetUser"></objectClass>
+	</objectClasses>
+
+	<attributes>
+
+		<attribute id="uid">
+			<display>User Id</display>
+			<icon>ldap-uid.png</icon>
+			<order>1</order>
+			<page>1</page>
+			<spacer>1</spacer>
+		</attribute>
+
+		<attribute id="userPassword">
+			<display>Password</display>
+			<helper>
+				<display>Encryption</display>
+				<id>enc</id>
+				<value>=php.PasswordEncryptionTypes()</value>
+			</helper>
+			<icon>lock.png</icon>
+			<order>2</order>
+			<page>1</page>
+			<post>=php.PasswordEncrypt(%enc%;%userPassword%)</post>
+			<spacer>1</spacer>
+			<verify>1</verify>
+		</attribute>
+
+		<attribute id="inetUserStatus">
+			<display>User status</display>
+			<order>3</order>
+			<page>1</page>
+			<type>select</type>
+			<value id="active">Active</value>
+			<value id="inactive">Inactive</value>
+			<value id="deleted">Deleted</value>
+			<spacer>1</spacer>
+		</attribute>
+
+		<attribute id="description">
+			<display>Description</display>
+			<order>4</order>
+			<page>1</page>
+			<cols>50</cols>
+			<rows>4</rows>
+			<spacer>1</spacer>
+		</attribute>
+
+		<attribute id="o">
+			<display>Organisation</display>
+			<icon>ldap-o.png</icon>
+			<order>5</order>
+			<page>1</page>
+		</attribute>
+
+		<attribute id="o">
+			<display>Organisational Unit</display>
+			<icon>ldap-ou.png</icon>
+			<order>6</order>
+			<page>1</page>
+		</attribute>
+
+		<attribute id="inetUserHttpURL">
+			<display>User URL</display>
+			<order>7</order>
+			<page>1</page>
+		</attribute>
+
+	</attributes>
+
+</template>
+<!-- vim: ts=4
+-->
